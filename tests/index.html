@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>John Doe JSCV Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../vendor/jspdf/jspdf.min.js"></script>
+    <script src="data/testData.js"></script>
+    <script src="../lib/frontend/modules/jscvAbstractSection.js"></script>
+    <script src="../lib/frontend/modules/jscvRenderGeneral.js"></script>
+    <script src="../lib/frontend/modules/jscv.js"></script>
+    <script>
+        var testing = new jscv(jscvDemoData);
+        testing.jscvPrepareMarkUp();
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Example JSCV</h1>
+    <!--Follow this <button onclick="test.addImage('http://team-matate.com/img/profile.png', setImageValue)" class="btn btn-primary">link</button> to view the results of using this awesome cv tool-->
+</div>
+</body>
+</html>
