@@ -7,3 +7,6 @@
 .DS_Store
 .jscvConfig.php
 lib/backend/
+vendor/
+composer.lock
+bootstrap.php
