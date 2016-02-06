@@ -1,0 +1,44 @@
+{% extends 'controllers/layouts/base.twig' %}
+
+{% block navigation %}
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header" style="padding: 20px">
+                <a class="navbar-brand" href="#">JSCV</a>
+            </div>
+            <ul class="nav navbar-nav" style="padding: 20px">
+                <li><a href="#">Demo</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form action="/Projects/jscv/index.php" role="form" method="POST">
+                        <input type="text" name="request_type" value="show_login_form" hidden>
+                        <div style="padding: 20px">
+                            <button type="submit" class="form-control" ><span class="glyphicon glyphicon-log-in"> Login</span></button>
+                        </div>
+                    </form>
+                </li>
+                <li>
+                    <form action="/Projects/jscv/index.php" role="form" method="POST">
+                        <input type="text" name="request_type" value="show_register_form" hidden>
+                        <div style="padding: 20px">
+                            <button type="submit" class="form-control" ><span class="glyphicon glyphicon-user"> Sign Up</span></button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3>About JSCV</h3>
+        <p>This is just one of many free CV builders out there to help you effortlessly generate a pdf version of your cv</p>
+        <p>There are two ways to get started using this tool</p>
+        <ul class="thumbnail" style="text-decoration: none;display: block">
+            <li class="well">You can use the tool without logging in, in which you may have to keep updating your data because it will not be saving elsewhere on this server</li>
+            <li class="well">Alternatively, you can create an account and your details will be stored such that all changes you make will alway be kept.This is totally, free</li>
+        </ul>
+    </div>
+{% endblock %}
+{% block login_box %}{% endblock %}
+{% block jscvSections %}{% endblock %}

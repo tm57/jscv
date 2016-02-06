@@ -1,0 +1,22 @@
+{% set index = 0 %}
+<form role="form" method="POST" action="/Projects/jscv/index.php">
+    <input type="text" name="section_heading" value="{{ section_heading }}" hidden>
+    <input type="text" name="user_id" value="{{ user.id }}" hidden>
+    <input type="text" name="request_type" value="section_update" hidden>
+    {% for section in sections %}
+        {% if section_heading == section.section_heading %}
+            <div class="container" style="background-color: lavender;padding: 0.78em;border-radius: 5px;margin:10px">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name of Institution, City, Country" name="subsection_heading-{{ section.id }}-{{ index }}" value="{{ section.subsection_heading }}" >
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="description-{{ section.id~'-'~index }}"> {{ section.description }} </textarea>
+                </div>
+            </div>
+            {% set index = index+1 %}
+        {% endif %}
+    {% endfor %}
+    <div class="form-group">
+        <input type="submit" class="form-control btn btn-primary" value="Save Changes" />
+    </div>
+</form>

@@ -5,3 +5,8 @@
 .idea/vcs.xml
 .idea/workspace.xml
 .DS_Store
+.jscvConfig.php
+lib/backend/
+vendor/
+composer.lock
+bootstrap.php
