@@ -10,3 +10,4 @@ lib/backend/
 vendor/
 composer.lock
 bootstrap.php
+index.php
